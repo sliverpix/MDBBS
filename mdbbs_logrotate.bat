@@ -2,19 +2,20 @@
 
 
 :: MDBBS - LogRotate
-:: version:  	1.0
+:: version:  	1.1
 :: Filename:  	mdbbs_logrotate.bat
 :: Created:  	11-02-2018
 :: Modified:  	02-21-2019
 :: Authored: 	James Griffith
 :: Summary:  	The purpose of this batch file is to rotate the log of the MongoDB
 ::				instance. Mongo does not do this automatically. This script will open
-::				a mongo shell, used adminDB and runCommand to start the internal LogRotate.
+::				a mongo shell, use adminDB and runCommand to start the internal LogRotate.
 ::				This script should be set to a scheduled task to be most effective.
 ::
 :: ToDo:
 ::					-- remove old logs every 30 days (to start)
-::					-- schedule 1/day @ 0200 CST
+::					-- schedule 1/day @ 0300 CST
+::					-- schedule 2/day @ 0300 & 1500 CST
 
 SETLOCAL ENABLEEXTENSIONS
 
@@ -57,5 +58,5 @@ IF %_ROTATERESULT% NEQ 0 (
 	exit /b 1
 )
 
-CD C:\MongoDump\
-ECHO [%DATE% : %TIME%] --:: DONE with MongoDB - LogRotate completed successfully. >> %BASELOGFILE%
+CD %_WORKDIR%
+ECHO [%DATE% : %TIME%] DONE with MongoDB - LogRotate completed successfully. >> %BASELOGFILE%
