@@ -11,7 +11,7 @@ __Filename:__		mdbbs_logrotate.bat
 
 The purpose of this batch file is to rotate the log of the MongoDB instance. Mongo does not do this automatically. This script will open a mongo shell, use adminDB and runCommand to start the internal LogRotate. Regardless if a logrotate is issued, the script will also clean up old log files. This script should be set to a scheduled task to be most effective.
 
-## ToDo:
+__ToDo:__
 - [X] * Cron/Schedule logrotate task
 - [X] * Add ability to target number of days to keep log files
 - [X] * Add ability to reduce the size of logs during rotate. something less than 40MB file size
@@ -28,7 +28,7 @@ __Filename:__		mdbbs_s3xfer.sh
 
 Cron script to catch the compressed backup made and off-loaded by mongoDBBackupandStore.bat. It will target a known S3 AWS bucket and upload the file to that bucket using the AWS CLI (must have AWS CLI installed on client machine for this script to function)
 
-## ToDo:
+__ToDo:__
 - [ ] * placeholder
 
 
@@ -42,7 +42,7 @@ __Filename:__		mongoDBBackupandStore.bat
 
 The purpose of this batch file is to compress a backup of the Monge DB using 7zip and then off load it to a network accessable storage device. Currently we will off load to the TVE OPS server to then be uploaded to an S3 bucket "tve-mongo-db-backup". From testing it looks like this will run best between midnight (server time) and prior to 5am. The over all running time averages to about 1 hour and 15 minutes total time for this script.
 
-## ToDo:
+__ToDo:__
 - [ ] * placeholder
 
 
