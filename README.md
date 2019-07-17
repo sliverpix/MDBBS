@@ -40,14 +40,14 @@ __ToDo:__
 * __Author:__		James Griffith
 * __Version:__		1.0
 
-The purpose of this batch file is to compress a backup of the Monge DB using 7zip and then off load it to a network accessable storage device. Currently we will off load to the TVE OPS server to then be uploaded to an S3 bucket "tve-mongo-db-backup". From testing it looks like this will run best between midnight (server time) and prior to 5am. The over all running time averages to about 1 hour and 15 minutes total time for this script.
+The purpose of this batch file is to compress a backup of the Mongo DB using 7zip and then off load it to a network accessible storage device. Currently we will off load to the TVE OPS server to then be uploaded to an S3 bucket "tve-mongo-db-backup". From testing it looks like this will run best between midnight (server time) and prior to 5am. The over all running time averages to about 1 hour and 15 minutes total time for this script.
 
 __ToDo:__
 - [ ] * placeholder
 
 
 
-## History
+### History
 
 * 11/02/2018 - Initial project creation
 	* created mongoDBBackupandStore.bat
