@@ -74,8 +74,8 @@ IF EXIST %DUMPDIR% (
  GOTO :COMPRESS
  ) ELSE (
  ECHO [%DATE% : %TIME%] Starting DUMP. >> %BASELOGFILE%
- START /wait "MDBBS - Backup Dump" "c:\MongoDB\bin\mongodump.exe" --port 27017 -u "mongoadmin" -p "mongoadmin1!" --authenticationDatabase "admin" --oplog
-REM START /wait "MDBBS - Backup Dump" "c:\MongoDB\bin\mongodump.exe" --port 27017 -u "Mongobackupuser" -p "backup1user" --authenticationDatabase "admin" --oplog
+ START /wait "MDBBS - Backup Dump" "c:\MongoDB\bin\mongodump.exe" --port 27017 -u "xxxRemoved" -p "xxxRemoved!" --authenticationDatabase "admin" --oplog
+REM START /wait "MDBBS - Backup Dump" "c:\MongoDB\bin\mongodump.exe" --port 27017 -u "xxxRemoved" -p "xxxRemoved" --authenticationDatabase "admin" --oplog
  )
  
  SET Mongodump_Result=%ERRORLEVEL%
